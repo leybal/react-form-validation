@@ -1,0 +1,11 @@
+th span {
+    opacity: .4;
+}
+
+th span:hover {
+    cursor: pointer;
+}
+
+th span.active {
+    opacity: 1;
+}
