@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import firebase from 'firebase';
 
+import { userService } from './services/user.service';
 import {DB_CONFIG} from "./config/db_config";
 
 import UserForm from './components/UserForm';
@@ -58,11 +59,11 @@ class App extends Component {
   }
 
   addUser = (userData) => {
-    this.database.push().set(userData);
+    userService.addUser(this.database, userData)
   };
 
   removeUser = (id) => {
-    this.database.child(id).remove();
+    userService.removeUser(this.database, id)
   };
 
   compareBy = (key, sortDirect) => {

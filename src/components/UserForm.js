@@ -17,7 +17,7 @@ class UserForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addUser(this.state);
-    this.setState({...this.initialState})
+    this.setState({...this.initialState});
 
     let inputs = document.querySelectorAll('form input.form-control'),
       form = document.querySelector('form.was-validated');
